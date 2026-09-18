@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.darkops/
+.env
+.env.local
+*.log
+*.tgz
+.DS_Store

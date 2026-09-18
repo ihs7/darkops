@@ -1,0 +1,60 @@
+{
+  "name": "darkops",
+  "version": "0.1.0",
+  "description": "Decision layer for software factories, powered by Jev.",
+  "keywords": [
+    "cli",
+    "code-quality",
+    "dark-factory",
+    "jev",
+    "software-factory",
+    "triage",
+    "typesafe"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihs7/darkops.git"
+  },
+  "bin": {
+    "darkops": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "bench": "bun run scripts/bench.ts",
+    "build": "bun run scripts/build.ts",
+    "prepack": "bun run build",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt --write",
+    "fmt:check": "oxfmt --check",
+    "check": "bun run fmt:check && bun run lint"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.9",
+    "@typesafe-ai/sdk": "^0.6.0",
+    "commander": "^15.0.0",
+    "es-module-lexer": "^3.0.2",
+    "ignore": "^7.0.9"
+  },
+  "devDependencies": {
+    "@babel/types": "^7",
+    "@types/bun": "latest",
+    "@types/node": "^24.0.0",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["import", "typescript", "unicorn"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "eqeqeq": "warn",
+    "no-console": "off",
+    "unicorn/prefer-node-protocol": "error",
+    "import/no-cycle": "error"
+  },
+  "ignorePatterns": ["dist", "node_modules", ".darkops"]
+}
